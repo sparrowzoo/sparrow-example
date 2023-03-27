@@ -3,6 +3,7 @@ package com.sparrow.example.boot;
 import com.sparrow.container.Container;
 import com.sparrow.container.ContainerBuilder;
 import com.sparrow.core.spi.ApplicationContext;
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +14,8 @@ import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 @SpringBootApplication(scanBasePackages = "com.sparrow.*")
+@MapperScan(basePackages = "com.sparrow.example.admin.dao")
+
 public class Application {
     private static Logger log = LoggerFactory.getLogger(Application.class);
 
@@ -32,6 +35,7 @@ public class Application {
                     .scanBasePackage("com.sparrow")
                     .initController(false)
                     .initSingletonBean(false)
+                    .initProxyBean(true)
                     .initInterceptor(false);
                 container.init(builder);
             }

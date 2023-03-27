@@ -15,6 +15,7 @@
         <module>example-admin-main-spring-boot</module>
         <module>example-admin-protocol</module>
         <module>example-admin-dao-sparrow</module>
+        <module>example-admin-dao-mybatis</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -8,6 +8,10 @@ rm -rf admin/example-admin-protocol/src
 rm -rf admin/example-admin-adapter/target
 rm -rf admin/example-admin-dao-api/target
 rm -rf admin/example-admin-dao-sparrow/target
+rm -rf admin/example-admin-dao-mybatis/target
+rm -rf admin/example-admin-dao-mybatis/src/main/resources/mapper/Sparrow*
+
+
 rm -rf admin/example-admin-domain/target
 rm -rf admin/example-admin-infrastructure/target
 rm -rf admin/example-admin-protocol/target

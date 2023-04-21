@@ -44,9 +44,14 @@
             <artifactId>example-admin-adapter</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.sparrowzoo.example.admin</groupId>-->
+<!--            <artifactId>example-admin-dao-mybatis</artifactId>-->
+<!--            <version>1.0.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.sparrowzoo.example.admin</groupId>
-            <artifactId>example-admin-dao-mybatis</artifactId>
+            <artifactId>example-admin-dao-sparrow</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>

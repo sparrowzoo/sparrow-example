@@ -16,5 +16,5 @@ rm -rf admin/example-admin-domain/target
 rm -rf admin/example-admin-infrastructure/target
 rm -rf admin/example-admin-protocol/target
 rm -rf admin/example-admin-main-spring-boot/src/main/resources/templates/sparrow*
-
+rm -rf */*.iml
 

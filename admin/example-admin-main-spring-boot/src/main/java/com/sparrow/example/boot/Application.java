@@ -31,7 +31,7 @@ public class Application {
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
                     //只扫描com.sparrow下的类
-                    .scanBasePackage("com.sparrow")
+                    .scanBasePackage("com.example")
                     .initController(false)
                     .initSingletonBean(false)
                     .initProxyBean(true)

@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>sparrow-bom</artifactId>
+        <groupId>com.sparrowzoo</groupId>
+        <version>1.0.5-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+    <packaging>pom</packaging>
+    <artifactId>example-bom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.sparrowzoo.example</groupId>
+    <properties>
+        <example_version>1.0.0-SNAPSHOT</example_version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-protocol</artifactId>
+            </dependency>
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-dao-api</artifactId>
+            </dependency>
+
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-dao-sparrow</artifactId>
+            </dependency>
+
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-mybatis</artifactId>
+            </dependency>
+
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-infrastructure</artifactId>
+            </dependency>
+
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-domain</artifactId>
+            </dependency>
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-adapter</artifactId>
+            </dependency>
+            <dependency>
+                <version>${example_version}</version>
+                <groupId>com.sparrowzoo.example.admin</groupId>
+                <artifactId>example-admin-main-spring-boot</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo.example</groupId>
+                <artifactId>example-po</artifactId>
+                <version>${example_version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

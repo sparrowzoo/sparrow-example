@@ -9,10 +9,6 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>admin</module>
+        <module>example-po</module>
     </modules>
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
 </project>

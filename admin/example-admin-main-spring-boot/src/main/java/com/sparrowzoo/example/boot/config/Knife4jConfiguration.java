@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.sparrow.example.boot.config;
+package com.sparrowzoo.example.boot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.sparrow.example.boot.config;
+package com.sparrowzoo.example.boot.config;
 
 import com.sparrow.mq.DefaultQueueHandlerMappingContainer;
 import com.sparrow.mq.EventHandlerMappingContainer;

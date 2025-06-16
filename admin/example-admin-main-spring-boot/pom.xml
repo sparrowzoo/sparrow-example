@@ -104,7 +104,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.sparrow.example.boot.Application</mainClass>
+                    <mainClass>com.sparrowzoo.example.boot.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>

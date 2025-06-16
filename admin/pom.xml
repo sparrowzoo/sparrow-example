@@ -16,5 +16,6 @@
         <module>example-admin-protocol</module>
         <module>example-admin-dao-sparrow</module>
         <module>example-admin-dao-mybatis</module>
+        <!--po-->
     </modules>
 </project>

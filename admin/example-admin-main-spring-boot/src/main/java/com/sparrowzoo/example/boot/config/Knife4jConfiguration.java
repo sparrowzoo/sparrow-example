@@ -34,13 +34,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 public class Knife4jConfiguration {
     @Bean
     public ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Sparrow Developer Community Security").description("Sparrow Developer Community Security").termsOfServiceUrl("www.sparrowzoo.com").contact(new Contact("harry", "http://www.sparrowzoo.com", "zh_harry@163.com")).version("1.0").build();
+        return new ApiInfoBuilder().title("Sparrow Developer Community example").description("Sparrow Developer Community Security").termsOfServiceUrl("www.sparrowzoo.com").contact(new Contact("harry", "http://www.sparrowzoo.com", "zh_harry@163.com")).version("1.0").build();
     }
 
     @Bean
     public Docket createRestApi(ApiInfo apiInfo) {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo).groupName("example").select().apis(
-                RequestHandlerSelectors.basePackage("com.example.admin.controller")
+                RequestHandlerSelectors.basePackage("$package_controller")
         ).paths(PathSelectors.any()).build();
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-@SpringBootApplication(scanBasePackages = "com.sparrowzoo.*")
+@SpringBootApplication(scanBasePackages = "$package_scan_base")
 //@MapperScan(basePackages = "com.sparrow.example.admin.dao")
 
 public class Application {
@@ -31,7 +31,7 @@ public class Application {
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
                     //只扫描com.sparrow下的类
-                    .scanBasePackage("com.sparrowzoo.example")
+                    .scanBasePackage("$package_scan_base")
                     .initController(false)
                     .initSingletonBean(false)
                     .initProxyBean(true)

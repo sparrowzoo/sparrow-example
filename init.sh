@@ -19,6 +19,7 @@ rm -rf admin/example-admin-main-spring-boot/src/main/resources
 rm -rf */*.iml
 rm -rf */bin
 rm -rf */target
+rm -rf */*/target
 
 
 

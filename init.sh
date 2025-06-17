@@ -18,6 +18,7 @@ rm -rf admin/example-admin-protocol/target
 rm -rf admin/example-admin-main-spring-boot/src/main/resources
 rm -rf */*.iml
 rm -rf */bin
+rm -rf */target
 
 
 

@@ -12,7 +12,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-@SpringBootApplication(scanBasePackages = "$package_scan_base")
+@SpringBootApplication(scanBasePackages = {"com.sparrow.*", "$package_scan_base"})
 //@MapperScan(basePackages = "com.sparrow.example.admin.dao")
 
 public class Application {
@@ -26,16 +26,17 @@ public class Application {
          * 因为orm template 初始化时需要method accessor 提速s
          */
         springApplication.addListeners(new ApplicationListener<ApplicationStartingEvent>() {
-            @Override public void onApplicationEvent(ApplicationStartingEvent event) {
+            @Override
+            public void onApplicationEvent(ApplicationStartingEvent event) {
                 Container container = ApplicationContext.getContainer();
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
-                    //只扫描com.sparrow下的类
-                    .scanBasePackage("$package_scan_base")
-                    .initController(false)
-                    .initSingletonBean(false)
-                    .initProxyBean(true)
-                    .initInterceptor(false);
+                        //只扫描com.sparrow下的类
+                        .scanBasePackage("$package_scan_base")
+                        .initController(false)
+                        .initSingletonBean(false)
+                        .initProxyBean(true)
+                        .initInterceptor(false);
                 container.init(builder);
             }
         });

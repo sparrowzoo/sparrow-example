@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 com\sparrow\spring\TestWithOutBoostrap.class
 com\sparrow\spring\TestWithBoostrap.class
+=======
+com/sparrow/spring/TestWithOutBoostrap.class
+com/sparrow/spring/TestWithBoostrap.class
+>>>>>>> 94906bad4883dc3169f03011fcd8692ad6d7eb9a

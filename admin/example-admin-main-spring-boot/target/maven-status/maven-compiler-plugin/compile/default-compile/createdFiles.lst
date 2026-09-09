@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com\sparrow\example\boot\Application.class
 com\sparrow\example\boot\Application$2.class
 com\sparrow\example\boot\config\Knife4jConfiguration.class
@@ -5,3 +6,12 @@ com\sparrow\example\boot\config\MvcConfigurerAdapter.class
 com\sparrow\example\boot\Application$3.class
 com\sparrow\example\boot\Application$1.class
 com\sparrow\example\boot\config\ControllerAdvice.class
+=======
+com/sparrowzoo/example/boot/config/Knife4jConfiguration.class
+com/sparrowzoo/example/boot/Application$2.class
+com/sparrowzoo/example/boot/config/MvcConfigurerAdapter.class
+com/sparrowzoo/example/boot/config/ControllerAdvice.class
+com/sparrowzoo/example/boot/Application$1.class
+com/sparrowzoo/example/boot/Application$3.class
+com/sparrowzoo/example/boot/Application.class
+>>>>>>> 94906bad4883dc3169f03011fcd8692ad6d7eb9a

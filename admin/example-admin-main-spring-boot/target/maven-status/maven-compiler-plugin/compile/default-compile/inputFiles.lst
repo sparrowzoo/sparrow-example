@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\main\java\com\sparrow\example\boot\config\ControllerAdvice.java
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\main\java\com\sparrow\example\boot\config\MvcConfigurerAdapter.java
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\main\java\com\sparrow\example\boot\config\Knife4jConfiguration.java
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\main\java\com\sparrow\example\boot\Application.java
+=======
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/main/java/com/sparrowzoo/example/boot/config/ControllerAdvice.java
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/main/java/com/sparrowzoo/example/boot/Application.java
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/main/java/com/sparrowzoo/example/boot/config/MvcConfigurerAdapter.java
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/main/java/com/sparrowzoo/example/boot/config/Knife4jConfiguration.java
+>>>>>>> 94906bad4883dc3169f03011fcd8692ad6d7eb9a

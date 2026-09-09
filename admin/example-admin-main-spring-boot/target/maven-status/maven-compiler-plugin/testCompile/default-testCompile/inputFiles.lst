@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\test\java\com\sparrow\spring\TestWithOutBoostrap.java
 D:\workspace\sparrow\sparrowzoo\sparrow-example\admin\example-admin-main-spring-boot\src\test\java\com\sparrow\spring\TestWithBoostrap.java
+=======
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/test/java/com/sparrow/spring/TestWithOutBoostrap.java
+/Users/zhanglizhi/workspace/sparrow-example/admin/example-admin-main-spring-boot/src/test/java/com/sparrow/spring/TestWithBoostrap.java
+>>>>>>> 94906bad4883dc3169f03011fcd8692ad6d7eb9a

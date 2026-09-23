@@ -263,3 +263,7 @@ sparrow-coder
 - **前端静态资源 404** —— 检查 `application.properties` 中 `workspace` / `frontend_project_root` 与 `dev.properties` 中 `physical_resource` 路径是否正确。
 - **前端无法正常渲染 / 接口返回异常** —— `ControllerAdvice` 中的 `@RestControllerAdvice(basePackages = {"com.sparrow"})` 默认是注释掉的。代码生成后请手动开启该注解，并把扫描包改为你自己业务的 controller 包（如 `com.yourcompany.controller`）；不要扫描 `com.sparrow` 官方框架包，否则会与框架自身的全局返回值处理冲突，导致前端无法正常渲染。
 - **生成代码与当前代码路径不一致** —— 下载脚手架后请注意工作目录配置，`application.properties` 中的 `workspace` / `project_root` 需指向当前项目所在目录以及前后端脚手架所在目录，否则生成代码无法与当前代码路径保持一致。具体配置说明请参考上文「4.4 配置」。
+- **生成代码后编译报 checkstyle 规范错误** —— 新生成的代码可能不满足 checkstyle 规范（如缺少 License 头、存在未使用的 import 等），有以下两种解决方案：
+  - **方案一：用 AI 统一修复（推荐）** —— 在 AI 编程助手中执行以下提示词，让其自动修复并保证编译通过：
+    `mvn clean install -Dmaven.test.skip 把 checkstyle 规范问题一并解决，不要解析过多文件，只保证编译通过即可`
+  - **方案二：绕过代码格式检查** —— 修改当前项目的 `maven-checkstyle-plugin` 配置，在其 `<configuration>` 中增加 `<skip>true</skip>` 以跳过 checkstyle 检查；或在编译命令后追加 `-Dcheckstyle.skip=true`。

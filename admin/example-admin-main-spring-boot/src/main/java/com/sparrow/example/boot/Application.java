@@ -1,10 +1,12 @@
-package com.sparrowzoo.example.boot;
+package com.sparrow.example.boot;
 
+import com.sparrow.coder.boot.config.EnableCoderApp;
 import com.sparrow.container.Container;
 import com.sparrow.container.ContainerBuilder;
 import com.sparrow.core.spi.ApplicationContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.sparrow.file.config.EnableFileApp;
+import com.sparrow.passport.config.EnablePassport;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationStartingEvent;
@@ -12,11 +14,13 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-@SpringBootApplication(scanBasePackages = {"com.sparrow.*", "$package_scan_base"})
+@SpringBootApplication
+@EnablePassport
+@EnableFileApp
+@EnableCoderApp
+@Slf4j
 //@MapperScan(basePackages = "com.sparrow.example.admin.dao")
-
 public class Application {
-    private static Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(Application.class);
@@ -32,7 +36,7 @@ public class Application {
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
                         //只扫描com.sparrow下的类
-                        .scanBasePackage("$package_scan_base")
+                        .scanBasePackage("com.sparrow")
                         .initController(false)
                         .initSingletonBean(false)
                         .initProxyBean(true)

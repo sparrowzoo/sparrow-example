@@ -17,10 +17,12 @@
 package com.sparrow.example.boot.config;
 
 import com.sparrow.spring.mvc.ControllerReturnAdvice;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 这里需要业务手动设置扫描路径
+ * 不要与sparrow 路径官方示例重叠
  */
-//@RestControllerAdvice(basePackages = {"com.yourcompany.controller"})
+@RestControllerAdvice(basePackages = {"com.sparrow.example.adapter"})
 public class ControllerAdvice extends ControllerReturnAdvice {
 }

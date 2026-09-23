@@ -267,4 +267,4 @@ sparrow-coder
   - **方案一：用 AI 统一修复（推荐）** —— 在 AI 编程助手中执行以下提示词，让其自动修复并保证编译通过：
     `mvn clean install -Dmaven.test.skip 把 checkstyle 规范问题一并解决，不要解析过多文件，只保证编译通过即可`
   - **方案二：绕过代码格式检查** —— 修改当前项目的 `maven-checkstyle-plugin` 配置，在其 `<configuration>` 中增加 `<skip>true</skip>` 以跳过 checkstyle 检查；或在编译命令后追加 `-Dcheckstyle.skip=true`。
-- **新生成代码对应的接口 404** —— 请在启动类 `Application` 上配置 `@SpringBootApplication(scanBasePackages = "com.yourcompany.controller")`，具体的 `basePackage` 以用户业务自定义为准。
+- **新生成代码对应的接口 404** —— 请在启动类 `Application` 上配置 `@SpringBootApplication(scanBasePackages = "com.yourcompany")`，具体的 `basePackage` 以用户业务自定义为准。

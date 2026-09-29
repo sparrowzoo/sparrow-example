@@ -141,11 +141,11 @@ mysql -uroot -p sparrow < ddl/t_user_example.sql
 编辑 `coder-main-spring-boot/src/main/resources/application.properties`：
 
 ```properties
-# 本地工作区路径（Mac 示例）
+# 后端脚手架示例（sparrow-example）所在目录（绝对路径，Mac 示例）
 workspace=/Users/<your-name>/workspace
 project_root=sparrow
-# 前端工程相对路径
-frontend_project_root=sparrow/sparrow-js
+# 前端工程 sparrow-js（含前端脚手架 react-next-admin）所在目录（绝对路径）
+frontend_project_root=/Users/<your-name>/workspace/sparrow/sparrow-js
 
 # 数据库
 spring.datasource.druid.url=jdbc:mysql://127.0.0.1/sparrow?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
@@ -261,6 +261,11 @@ sparrow-coder
 - **编译失败：找不到 `infra-bom` / `sparrow-*` 依赖** —— 依赖仓库未安装，请按 4.2 顺序重新 `mvn clean install`。
 - **启动时数据库连接失败** —— 检查 MySQL 是否启动、`sparrow` 库是否创建、账号密码是否正确。
 - **前端静态资源 404** —— 检查 `application.properties` 中 `workspace` / `frontend_project_root` 与 `dev.properties` 中 `physical_resource` 路径是否正确。
+- **`workspace` / `frontend_project_root` 配置指向错误** —— 这两个配置均为**绝对路径**（不是相对目录），且需指向**你自己**脚手架所在目录：`workspace` 是后端脚手架示例（`sparrow-example`）所在目录，`frontend_project_root` 是前端工程 `sparrow-js`（含前端脚手架 `react-next-admin`）所在目录。请替换为你自己机器上的实际绝对路径，不要照抄示例。例如：
+  ```properties
+  workspace=/Users/<your-name>/workspace
+  frontend_project_root=/Users/<your-name>/workspace/sparrow/sparrow-js
+  ```
 - **前端无法正常渲染 / 接口返回异常** —— `ControllerAdvice` 中的 `@RestControllerAdvice(basePackages = {"com.sparrow"})` 默认是注释掉的。代码生成后请手动开启该注解，并把扫描包改为你自己业务的 controller 包（如 `com.yourcompany.controller`）；不要扫描 `com.sparrow` 官方框架包，否则会与框架自身的全局返回值处理冲突，导致前端无法正常渲染。
 - **生成代码与当前代码路径不一致** —— 下载脚手架后请注意工作目录配置，`application.properties` 中的 `workspace` / `project_root` 需指向当前项目所在目录以及前后端脚手架所在目录，否则生成代码无法与当前代码路径保持一致。具体配置说明请参考上文「4.4 配置」。
 - **生成代码后编译报 checkstyle 规范错误** —— 新生成的代码可能不满足 checkstyle 规范（如缺少 License 头、存在未使用的 import 等），有以下两种解决方案：

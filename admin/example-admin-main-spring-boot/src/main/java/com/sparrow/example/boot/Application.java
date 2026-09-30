@@ -30,7 +30,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-@SpringBootApplication(scanBasePackages = {"com.sparrow.example.boot"})
+@SpringBootApplication(scanBasePackages = {"com.sparrow.example.boot","${base_package}"})
 @EnablePassport
 @EnableFileApp
 @EnableCoderApp
@@ -52,7 +52,7 @@ public class Application {
                 //只提供proxy 代码类加速反射
                 ContainerBuilder builder = new ContainerBuilder()
                         //只扫描com.sparrow下的类，注意 如果这里有用户自定义的包，请手动添加
-                        .scanBasePackage("com.sparrow")
+                        .scanBasePackage("com.sparrow,${base_package}")
                         .initController(false)
                         .initSingletonBean(false)
                         .initProxyBean(true)

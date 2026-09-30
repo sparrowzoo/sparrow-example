@@ -14,15 +14,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sparrow.example.boot.config;
 
-import com.sparrow.spring.mvc.ControllerReturnAdvice;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+package example;
+
+import com.sparrow.protocol.DisplayTextAccessor;
+import com.sparrow.protocol.dao.PO;
+import jakarta.persistence.*;
+import lombok.Data;
 
 /**
- * 这里需要业务手动设置扫描路径
- * 不要与sparrow 路径官方示例重叠
+ * 注意implements DisplayTextAccessor 为自动提供列表搜索支持 必须添加
  */
-@RestControllerAdvice(basePackages = {"${base_package}"})
-public class ControllerAdvice extends ControllerReturnAdvice {
+@Table(name = "t_department")
+@Data
+public class Department extends PO implements DisplayTextAccessor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", columnDefinition = "int COMMENT 'ID'")
+    private Long id;
+    @Column(name = "name", nullable = false, columnDefinition = "varchar(32) COMMENT '部门名称'")
+    private String name;
+
+    @Override
+    public String getDisplayText() {
+        return this.name;
+    }
 }
